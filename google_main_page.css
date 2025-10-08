@@ -1,11 +1,11 @@
 /* Variables CSS para consistencia de estilo */
 :root {
-    --color-background: #1e1e1e; /* Fondo oscuro */
-    --color-surface: #363636;    /* Fondo de la barra de búsqueda */
-    --color-text: #f0f0f0;       /* Texto blanco/claro */
+    --color-background: #ffffff; /* Fondo oscuro */
+    --color-surface: #ffffff;    /* Fondo de la barra de búsqueda */
+    --color-text: #000000;       /* Texto blanco/claro */
     --color-text-placeholder: #aaaaaa; /* Texto de marcador de posición */
     --color-border: #555555;     /* Borde de la barra de búsqueda */
-    --color-button-bg: #404040;  /* Fondo de botones grises */
+    --color-button-bg: #cecccc;  /* Fondo de botones grises */
     --color-button-hover: #505050; /* Hover de botones */
 }
 
