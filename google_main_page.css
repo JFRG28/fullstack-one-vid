@@ -1,0 +1,95 @@
+/* Variables CSS para consistencia de estilo */
+:root {
+    --color-background: #1e1e1e; /* Fondo oscuro */
+    --color-surface: #363636;    /* Fondo de la barra de búsqueda */
+    --color-text: #f0f0f0;       /* Texto blanco/claro */
+    --color-text-placeholder: #aaaaaa; /* Texto de marcador de posición */
+    --color-border: #555555;     /* Borde de la barra de búsqueda */
+    --color-button-bg: #404040;  /* Fondo de botones grises */
+    --color-button-hover: #505050; /* Hover de botones */
+}
+
+/* Estilos Generales para el Cuerpo de la Página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-background);
+    color: var(--color-text);
+    margin: 0;
+    padding-top: 150px; /* Espacio para centrar verticalmente el contenido */
+    display: flex;
+    flex-direction: column; /* Organizar elementos en una columna */
+    align-items: center; /* Centrar horizontalmente */
+    min-height: 100vh;
+}
+
+/* 1. Estilo para el Logo/Imagen */
+img {
+    max-width: 280px; /* Tamaño típico de logo central */
+    height: auto;
+    margin-bottom: 25px;
+    /* La imagen tiene un fondo blanco. Usaremos un filtro para oscurecerla si el tema es oscuro */
+    /* Este filtro es opcional, pero ayuda a integrarla en un tema oscuro */
+    /*filter: invert(0.8) sepia(1) hue-rotate(180deg) saturate(1.5); */ 
+}
+
+/* 2. Estilo para el Campo de Búsqueda */
+input[type="text"] {
+    width: 90%;
+    max-width: 580px; /* Ancho máximo estándar para la barra de búsqueda */
+    padding: 12px 15px;
+    margin-bottom: 30px;
+    border: 1px solid var(--color-border);
+    border-radius: 25px; /* Bordes redondeados para el estilo Google */
+    background-color: var(--color-surface);
+    color: var(--color-text);
+    font-size: 1.1em;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus {
+    border-color: #5d9eeb; /* Borde azulado al enfocar */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    outline: none;
+}
+
+/* Estilo para el texto placeholder */
+input::placeholder {
+    color: var(--color-text-placeholder);
+}
+
+/* 3. Estilo para los Botones */
+button {
+    background-color: var(--color-button-bg);
+    color: var(--color-text);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 10px 18px;
+    margin: 0 6px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--color-button-hover);
+    border-color: #666; /* Borde sutil al pasar el mouse */
+}
+
+button:active {
+    background-color: #505050; /* Presionar */
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 650px) {
+    input[type="text"] {
+        max-width: 95%;
+    }
+    button {
+        display: block; /* Apilar botones en pantallas muy pequeñas */
+        width: 80%;
+        max-width: 580px;
+        margin: 10px auto;
+    }
+}
