@@ -1,0 +1,14 @@
+body {
+    background: white;
+}
+.main{
+    margin-top: 100px;
+}
+.input_bar{
+    width: 400px;
+    display: block;
+}
+.img_logo{    
+    width: 300px;
+    display: block;
+}
