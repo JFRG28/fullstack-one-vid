@@ -1,5 +1,6 @@
 body {
     margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .foto-perfil {
     width: 150px;
@@ -16,4 +17,10 @@ body {
 }
 .border-blue-dot{
     border: 1px dotted blue;
+}
+.card-colors{
+    color: #2b2839;
+    background-color: #ddebf8;
+    border-bottom: 10px solid #d8cefe;
+
 }
