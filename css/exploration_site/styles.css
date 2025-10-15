@@ -1,13 +1,45 @@
 body{
-    color: white;
-    background-image: url("../exploration_site/images/milky_way.jpg");
-    background-size: cover;
+    color: #82a5ca;
     text-align: center;
+    font-family: "Orbitron", sans-serif;
 }
 
 .btn-apply{
-    color: black;
+    color: #82a5ca;
     padding: 5px 10px;
     background: white;
     border: none;
+    font-family: "halo", sans-serif;
+    font-weight: bold;
+}
+
+/* 
+<weight>: Use a value from 400 to 900
+<uniquifier>: Use a unique and descriptive class name
+.orbitron-<uniquifier> {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+*/
+@font-face {
+    font-family: Halo;
+    src: url("halo.ttf");
+}
+.cta-ex{
+    text-decoration: underline;
+}
+#img-logo-spacex{
+    width: 200px;
+    height: auto;
+    text-align: center;
+}
+#hero-section{
+    background-image: url("images/galaxy.webp");
+    background-size: cover;
+    padding-bottom: 1000px;
+}
+#tandc-section{
+    font-weight: bold;
 }
