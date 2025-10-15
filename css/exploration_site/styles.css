@@ -1,0 +1,13 @@
+body{
+    color: white;
+    background-image: url("../exploration_site/images/milky_way.jpg");
+    background-size: cover;
+    text-align: center;
+}
+
+.btn-apply{
+    color: black;
+    padding: 5px 10px;
+    background: white;
+    border: none;
+}
