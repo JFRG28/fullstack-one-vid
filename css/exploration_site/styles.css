@@ -2,6 +2,7 @@ body{
     color: #82a5ca;
     text-align: center;
     font-family: "Orbitron", sans-serif;
+    margin: 0px;
 }
 
 .btn-apply{
@@ -32,14 +33,13 @@ body{
 }
 #img-logo-spacex{
     width: 200px;
-    height: auto;
-    text-align: center;
 }
 #hero-section{
     background-image: url("images/galaxy.webp");
     background-size: cover;
-    padding-bottom: 1000px;
+    padding-top: 15px;
+    padding-bottom: 400px;
 }
-#tandc-section{
-    font-weight: bold;
+#title{
+    text-shadow: 0px 0px 4px black;
 }
