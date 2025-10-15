@@ -4,6 +4,8 @@ body {
 }
 .foto-perfil {
     width: 150px;
+    border-radius: 2%;
+    border-width: 2px;
 }
 .card{
     width: 400px;
@@ -11,16 +13,16 @@ body {
     padding: 20px;
     display: flex;
     justify-content: space-around;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 20px auto;
     text-align: center;
 }
 .border-blue-dot{
     border: 1px dotted blue;
 }
 .card-colors{
-    color: #2b2839;
-    background-color: #ddebf8;
-    border-bottom: 10px solid #d8cefe;
+    color: #ffffff;
+    background-color: #124559;
+    border-bottom: 10px solid #c47335;
+    border-radius: 10px;
 
 }
