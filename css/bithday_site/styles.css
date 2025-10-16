@@ -1,19 +1,9 @@
-/*
-Challenge:
-Style the app according to the provided design.
-The font is called "Happy Monkey" and can be
-embedded via Google Fonts.
-
-Don't know how to make an image round? Google it!
-Also, consider how you should select the image 
-(class vs id vs element selector).
-*/
 body {
     font-family: 'Happy Monkey', cursive;
     text-align: center;
     margin: 0;
     padding: 0;
-    background-color: #a2d2ff;
+    background: linear-gradient(#a2d2ff,#EFB0C9);
     color: white;    
 }
 #lulu-perfil-img {
@@ -62,4 +52,26 @@ h1, h2, h4 {
 }
 #gift-hot-img:hover {
     background-image: url("images/hot.gif");
+}
+#gift-genius-img:hover {
+    background-image: url("images/ohmygod.gif");
+}
+#gift-badass-img:hover {
+    background-image: url("images/rachel.gif");
+}
+#cheers-img {
+    height: 200px;
+}
+#cheers-img:hover {
+    background-image: url("images/cheers.gif");
+}
+#footer {
+    margin: 50px auto 20px;
+    max-width: 400px;
+    height: 400px;
+    font-style: italic;
+}
+a{
+    color: white;
+    text-decoration:underline;
 }
