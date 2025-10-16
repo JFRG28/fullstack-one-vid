@@ -48,7 +48,7 @@ h1, h2, h4 {
     justify-content: center;
     margin-bottom: 50px;
 }
-#gift-one-cover-img, #gift-two-cover-img {
+.gift-cover-img {
     width: 400px;
     height: 400px;
     border-radius: 10px;
@@ -57,9 +57,9 @@ h1, h2, h4 {
     background-size: cover;
     margin: 0 auto;
 }
-#gift-one-cover-img:hover {
+#gift-happy-img:hover {
     background-image: url("images/happy.gif");
 }
-#gift-two-cover-img:hover {
+#gift-hot-img:hover {
     background-image: url("images/hot.gif");
 }
