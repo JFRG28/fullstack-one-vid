@@ -28,3 +28,28 @@ body {
 h1, h2, h4 {
     text-shadow: 0px 0px 1px black;
 }
+#bday-age {
+    background: #EFB0C9;
+    border-radius: 5px;
+    padding: 8px 10px 5px 10px;
+    margin: 5px 0 10px 0;
+}
+
+#bday-date {
+    background: #EFB0C9;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin: 0;
+}
+#header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.gift-cover-img{
+    width: 400px;
+    border-radius: 10px;
+    border: 5px solid white;
+}
