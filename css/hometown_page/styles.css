@@ -2,6 +2,7 @@ body {
     text-align: center;
     margin: 0px;    
     color: white;
+    background: rgb(170, 163, 163);
 }
 #hero-section {
     background-image: url("images/arco-leon.webp");
@@ -20,9 +21,9 @@ body {
     width: 250px;
     text-shadow: 0px 0px 4px black;
 }
-#middle-section{   
-    margin-top: 0px; 
-    background: rgb(170, 163, 163);
+#middle-section{
+    display: flex;
+    color: black;
 }
 .img-activity {
     width: 200px;
@@ -32,4 +33,8 @@ body {
     margin: 20px 0;
     border: none;
     
+}
+#ms-title{
+    color: black;
+    text-align: center;
 }
