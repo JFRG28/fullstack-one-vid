@@ -3,6 +3,7 @@ body {
     margin: 0px;    
     color: black;
     background: rgb(170, 163, 163);
+    font-family: "Ubuntu", sans-serif;
 }
 #hero-section {
     background-image: url("images/arco-leon.webp");
