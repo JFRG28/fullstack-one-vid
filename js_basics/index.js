@@ -19,11 +19,31 @@
 
 let count=0
 let countEl=document.getElementById("count-el")
-console.log(countEl)
+//console.log(countEl)
+let saveEl=document.getElementById("save-el")
 
 function increment(){
-    console.log("The button was clicked")
+//    console.log("The button was clicked")
     count++
     countEl.innerText=count
-    console.log(count)
+//    console.log(count)
 }
+
+function save(){
+    let entryHistory=count+" - "
+    saveEl.innerText+=entryHistory
+    console.log(count)
+    console.log(entryHistory)
+}
+
+//using the escape character "\" 
+let wish = "I'd love to see the show \"The Lion King\"."
+console.log(wish)
+
+let welcomeEl=document.getElementById("welcome-el")
+//console.log(welcomeEl)
+let name="Paco"
+let greeting="Welcome back "
+welcomeEl.innerText=greeting+name
+//welcomeEl.innerText=welcomeEl.innerText+" 👋" //noob way
+welcomeEl.innerText+=" 👋" //pro way
