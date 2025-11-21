@@ -31,7 +31,9 @@ function increment(){
 
 function save(){
     let entryHistory=count+" - "
-    saveEl.innerText+=entryHistory
+    saveEl.textContent+=entryHistory
+    count=0
+    countEl.textContent=count
     console.log(count)
     console.log(entryHistory)
 }
