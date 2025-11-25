@@ -10,3 +10,10 @@ function addScore(team,points){
         document.getElementById("score-guest").textContent=scoreGuest
     }    
 }
+
+function resetScore(){
+    scoreHome=0
+    document.getElementById("score-home").textContent=scoreHome
+    scoreGuest=0
+    document.getElementById("score-guest").textContent=scoreGuest
+}

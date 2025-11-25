@@ -6,21 +6,22 @@
     <title>Basketball Scoreboard</title>
     <body>
         <div class="container">
-            <div class="lay-item">
+            <div class="container-item">
                 <div class="name-team">HOME</div>
                 <div class="score" id="score-home">0</div>
                 <button class="btnIncrement" onclick="addScore('home',1)">+1</button>
                 <button class="btnIncrement" onclick="addScore('home',2)">+2</button>
                 <button class="btnIncrement" onclick="addScore('home',3)">+3</button>
-            </div>            
-            <div class="lay-item">
+            </div>
+            <div class="container-item">
                 <div class="name-team">GUEST</div>
                 <div class="score" id="score-guest">0</div>
                 <button class="btnIncrement" onclick="addScore('guest',1)">+1</button>
                 <button class="btnIncrement" onclick="addScore('guest',2)">+2</button>
                 <button class="btnIncrement" onclick="addScore('guest',3)">+3</button>
-            </div> 
+            </div>            
         </div>
+        <button class="btnReset" onclick="resetScore()">New match</button>
         <script src="index.js"></script>
     </body>
 </html>

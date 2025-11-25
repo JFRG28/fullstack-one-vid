@@ -42,3 +42,11 @@ body {
     font-family: "CursedTimer", sans-serif;
     border-radius: 10px;
 }
+
+.btnReset{    
+    width: 60px;
+    height: 60px;
+    font-family: "CursedTimer", sans-serif;
+    border-radius: 10px;
+    background-color: #0284C7;
+}
