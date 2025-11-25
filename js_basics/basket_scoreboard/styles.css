@@ -9,7 +9,7 @@ body {
     src: url("CursedTimer.ttf");
 }
 
-#layout {
+.container {
     width: 575px;
     height: 385px;
     display: flex;
@@ -18,12 +18,19 @@ body {
     color: white;
 }
 
+.name-team{
+    display: flex;
+    text-align: center;
+    font-size: 50px;
+}
+
 .score{
+    display: flex;
     width: 155px;
     height: 120px;
     background-color: black;
     font-family: "CursedTimer", sans-serif;
-    text-align: center;
+    justify-content: center;
     font-size: 100px;
     color: #F94F6D;
     margin-top: 0px;
