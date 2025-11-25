@@ -1,0 +1,37 @@
+body {    
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+@font-face {
+    font-family: CursedTimer;
+    src: url("CursedTimer.ttf");
+}
+
+#layout {
+    width: 575px;
+    height: 385px;
+    display: flex;
+    justify-content: space-around;
+    background-color: #1B244A;
+    color: white;
+}
+
+.score{
+    width: 155px;
+    height: 120px;
+    background-color: black;
+    font-family: "CursedTimer", sans-serif;
+    text-align: center;
+    font-size: 100px;
+    color: #F94F6D;
+    margin-top: 0px;
+}
+
+.btnIncrement{    
+    width: 45px;
+    height: 45px;
+    font-family: "CursedTimer", sans-serif;
+    border-radius: 10px;
+}
