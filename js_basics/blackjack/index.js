@@ -24,4 +24,11 @@ function startGame(){
     messageEl.textContent=message
 }
 
+function newCard(){
+    let card=3
+    console.log("Drawing a new card from the deck!"+"("+card+")")
+    sum+=card
+    startGame()
+}
+
 
