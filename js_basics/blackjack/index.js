@@ -16,7 +16,17 @@ let cards=[
 ]
 
 function getRandomCard(){
-    return 5
+    let randomCard=Math.floor(Math.random()*13)+1
+    
+    if (randomCard==1){
+        return 11
+    } else if (randomCard>10 && randomCard<14){
+        return 10
+    } else{
+        return randomCard
+    }
+    
+    //return 5
 }
 
 function startGame(){
