@@ -56,19 +56,24 @@ function renderGame(){
         message="Wohoo! You've got Blackjack! 🥳"
         hasBlackJack=true
     } else {
-    message="You're out of the game! 😭"
-    isAlive=false
+        message="You're out of the game! 😭"
+        isAlive=false
     }
     messageEl.textContent=message
 }
 
 function newCard(){
     //let card=3
-    let card=getRandomCard()
-    console.log("Drawing a new card from the deck!"+"("+card+")")
-    sum+=card
-    cards.push(card)
-    renderGame()
+    if (isAlive && !hasBlackJack){
+        let card=getRandomCard()
+        console.log("Drawing a new card from the deck!"+"("+card+")")
+        sum+=card
+        cards.push(card)
+        renderGame()
+    } else{
+        console.log("NOT ALLOWED")
+    }
+    
 }
 
 
