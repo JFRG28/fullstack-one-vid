@@ -1,35 +1,29 @@
 const characters = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z","a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9","~","`","!","@","#","$","%","^","&","*","(",")","_","-","+","=","{","[","}","]",",","|",":",";","<",">",".","?",
 "/"];
 const defaultLength=15
-let isCustomLength
-
+let isCustomLength=false
+let pwd1=document.querySelector("#pwd1");
+let pwd2=document.querySelector("#pwd2");
+let setLengthCheckbox = null;
+let lengthInput = null;
 
 // Habilita/deshabilita el input de longitud cuando cambia el checkbox.
+
 document.addEventListener("DOMContentLoaded", () => {
-    isCustomLength=false
-  const setLengthCheckbox = document.querySelector("#setLength");
-  const lengthInput = document.querySelector("#lengthInput");
+  setLengthCheckbox = document.querySelector("#setLength");
+  lengthInput = document.querySelector("#lengthInput");
 
   if (!setLengthCheckbox || !lengthInput) return;
 
-  // Asegura estado inicial coherente (input empieza disabled según HTML)
+  // Estado inicial coherente
   lengthInput.disabled = !setLengthCheckbox.checked;
-  isCustomLength=false
-  console.log("cambio a falso: "+isCustomLength)
+  isCustomLength = !!setLengthCheckbox.checked;
 
   setLengthCheckbox.addEventListener("change", () => {
     const enabled = setLengthCheckbox.checked;
     lengthInput.disabled = !enabled;
-    isCustomLength=true
-    console.log("cambio a verdadero: "+isCustomLength)
-    
-    /*if (enabled) {
-      // Enfoca y selecciona el contenido para mejor UX
-      lengthInput.focus();
-      if (typeof lengthInput.select === "function") {
-        lengthInput.select();
-      }
-    }*/
+    // <-- FIX: asignar el valor real del checkbox en vez de forzar true
+    isCustomLength = enabled;
   });
 });
 
@@ -41,7 +35,6 @@ function renderPwd(){
 function genPwd(){
     let length=defaultLength
     let password=""
-    console.log("antes del if: "+isCustomLength)
     if (isCustomLength){
         length=lengthInput.valueAsNumber
     } else {
