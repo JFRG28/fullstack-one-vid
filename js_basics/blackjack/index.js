@@ -17,6 +17,13 @@ let cardsEl=document.querySelector(".cards-el")
 ]
 */
 let cards=[]
+let player={
+    name:"Paco",
+    chips:28
+}
+
+let playerEl=document.querySelector("#player-el")
+playerEl.textContent=player.name+" $"+player.chips
 
 function getRandomCard(){
     let randomCard=Math.floor(Math.random()*13)+1
