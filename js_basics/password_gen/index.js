@@ -10,21 +10,21 @@ let lengthInput = null;
 // Habilita/deshabilita el input de longitud cuando cambia el checkbox.
 
 document.addEventListener("DOMContentLoaded", () => {
-  setLengthCheckbox = document.querySelector("#setLength");
-  lengthInput = document.querySelector("#lengthInput");
+    setLengthCheckbox = document.querySelector("#setLength");
+    lengthInput = document.querySelector("#lengthInput");
 
-  if (!setLengthCheckbox || !lengthInput) return;
+    if (!setLengthCheckbox || !lengthInput) return;
 
-  // Estado inicial coherente
-  lengthInput.disabled = !setLengthCheckbox.checked;
-  isCustomLength = !!setLengthCheckbox.checked;
+    // Estado inicial coherente
+    lengthInput.disabled = !setLengthCheckbox.checked;
+    isCustomLength = !!setLengthCheckbox.checked;
 
-  setLengthCheckbox.addEventListener("change", () => {
-    const enabled = setLengthCheckbox.checked;
-    lengthInput.disabled = !enabled;
-    // <-- FIX: asignar el valor real del checkbox en vez de forzar true
-    isCustomLength = enabled;
-  });
+    setLengthCheckbox.addEventListener("change", () => {
+        const enabled = setLengthCheckbox.checked;
+        lengthInput.disabled = !enabled;
+        // <-- FIX: asignar el valor real del checkbox en vez de forzar true
+        isCustomLength = enabled;
+    });
 });
 
 function renderPwd(){
