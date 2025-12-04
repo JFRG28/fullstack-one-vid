@@ -21,7 +21,26 @@
           </h1>
           <p class="subtitle">Never use an insecure password again.</p>
 
-          <button class="btn-generate">Generate passwords</button>
+          <!-- Controles: checkbox para activar longitud + textbox deshabilitado por defecto y botón -->
+          <div class="controls">
+            <label class="length-toggle" for="setLength">
+              <input type="checkbox" id="setLength" />
+              Set password length
+            </label>
+
+            <input
+              id="lengthInput"
+              type="number"
+              min="4"
+              max="64"
+              value="12"
+              disabled
+              class="btn-length"
+              aria-label="Password length input"
+            />
+
+            <button class="btn-generate" id="generateBtn">Generate passwords</button>
+          </div>
         </header>
 
         <div class="divider" role="presentation"></div>
@@ -33,5 +52,7 @@
       </div>
     </section>
   </main>
+
+  <script src="index.js"></script>
 </body>
 </html>

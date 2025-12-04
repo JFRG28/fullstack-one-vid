@@ -52,7 +52,34 @@ body {
   font-weight: 400;
 }
 
-/* Botón principal */
+/* Contenedor de controles (checkbox + input + botón) */
+.controls {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+/* Label del checkbox */
+.length-toggle {
+  color: rgba(219,230,234,0.9);
+  font-weight: 600;
+  display: inline-flex;
+  gap: 8px;
+  align-items: center;
+  cursor: pointer;
+}
+
+/* Estilo nativo y tamaño del checkbox */
+.length-toggle input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  cursor: pointer;
+}
+
+/* Botón principal (se mantiene exactamente como antes) */
 .btn-generate {
   display: inline-block;
   background: #19b977;
@@ -69,6 +96,40 @@ body {
 
 /* Pequeña separación entre botón y resto */
 .btn-generate:active { transform: translateY(1px); }
+
+/* Estilo para el textbox de longitud: mantiene el estilo visual coherente con el botón */
+.btn-length {
+  display: inline-block;
+  background: #19b977;
+  color: #fff;
+  border: none;
+  padding: 12px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: text;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.12) inset;
+  transition: transform .08s ease, box-shadow .08s ease, opacity .08s ease;
+  width: 96px;
+  text-align: center;
+}
+
+/* Quitar spinners en number inputs para una apariencia más parecida a botón */
+.btn-length::-webkit-outer-spin-button,
+.btn-length::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.btn-length {
+  -moz-appearance: textfield;
+}
+
+/* Apariencia cuando el input está deshabilitado */
+.btn-length:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  filter: grayscale(.02);
+}
 
 /* Línea divisoria */
 .divider {
@@ -103,6 +164,8 @@ body {
 @media (max-width: 640px) {
   .card { padding: 36px; }
   .title { font-size: 32px; }
+  .controls { gap: 8px; }
   .outputs { gap: 12px; }
   .output { flex-basis: 100%; }
+  .btn-length { width: 72px; }
 }
