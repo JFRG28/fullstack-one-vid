@@ -1,21 +1,10 @@
-//let firstCard=1
-//let secondCard=11
-//let firstCard=getRandomCard()
-//let secondCard=getRandomCard()
-//let sum=firstCard+secondCard
 let sum=0
 let hasBlackJack=false
 let isAlive=false
 let message=""
 let messageEl=document.getElementById("message-el")
-//let sumEl=document.getElementById("sum-el")
 let sumEl=document.querySelector("#sum-el")
 let cardsEl=document.querySelector(".cards-el")
-/*let cards=[
-    firstCard,
-    secondCard
-]
-*/
 let cards=[]
 let player={
     name:"Paco",
@@ -28,19 +17,18 @@ playerEl.textContent=player.name+" $"+player.chips
 function getRandomCard(){
     let randomCard=Math.floor(Math.random()*13)+1
     
-    if (randomCard==1){
+    if (randomCard===1){
         return 11
     } else if (randomCard>10 && randomCard<14){
         return 10
     } else{
         return randomCard
     }
-    
-    //return 5
 }
 
 function startGame(){
     isAlive=true
+    hasBlackJack=false
     sum=0
     cards=[]
     cards[0]=getRandomCard()
@@ -50,8 +38,6 @@ function startGame(){
 }
 
 function renderGame(){
-    //cardsEl.textContent="Cards: "+firstCard+", "+secondCard
-    //cardsEl.textContent="Cards: "+cards[0]+", "+cards[1]
     cardsEl.textContent="Cards: "
     for (let i=0;i<cards.length;i++){
         cardsEl.textContent+=cards[i]+" "
@@ -70,7 +56,6 @@ function renderGame(){
 }
 
 function newCard(){
-    //let card=3
     if (isAlive && !hasBlackJack){
         let card=getRandomCard()
         console.log("Drawing a new card from the deck!"+"("+card+")")
@@ -79,8 +64,7 @@ function newCard(){
         renderGame()
     } else{
         console.log("NOT ALLOWED")
-    }
-    
+    }    
 }
 
 
