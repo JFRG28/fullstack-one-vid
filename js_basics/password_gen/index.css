@@ -1,3 +1,108 @@
+/* Reset y base */
+* { box-sizing: border-box; }
+html,body { height: 100%; }
 body {
-    margin: 0;
+  margin: 0;
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #0f1a22; /* fondo oscuro de la página */
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px;
+}
+
+/* Card principal */
+.card {
+  width: min(880px, 94vw);
+  background: #17252e; /* color del recuadro */
+  border-radius: 14px;
+  padding: 56px;
+  box-shadow: 0 8px 30px rgba(3,8,12,0.45);
+  color: #dbe6ea;
+}
+
+/* Contenedor interno para controlar anchura */
+.card-inner {
+  max-width: 640px;
+}
+
+/* Títulos */
+.title {
+  margin: 0 0 12px 0;
+  font-weight: 800;
+  color: #ffffff;
+  font-size: 44px;
+  line-height: 1.02;
+  letter-spacing: -0.02em;
+}
+
+/* Palabra destacada en verde */
+.title--accent {
+  display: block;
+  color: #20c27b; /* verde destacado */
+}
+
+/* Subtítulo */
+.subtitle {
+  margin: 0 0 26px 0;
+  color: rgba(219,230,234,0.78);
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/* Botón principal */
+.btn-generate {
+  display: inline-block;
+  background: #19b977;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 2px 0 rgba(0,0,0,0.12) inset;
+  transition: transform .08s ease, box-shadow .08s ease;
+}
+
+/* Pequeña separación entre botón y resto */
+.btn-generate:active { transform: translateY(1px); }
+
+/* Línea divisoria */
+.divider {
+  margin: 32px 0;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+}
+
+/* Contenedor de resultados (dos columnas) */
+.outputs {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Cada caja de password */
+.output {
+  flex: 1 1 45%;
+  min-width: 180px;
+  background: #16313a; /* caja oscuro ligeramente diferente */
+  border-radius: 8px;
+  padding: 16px;
+  color: #47caa0; /* texto verde suave */
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.12) inset;
+  letter-spacing: 0.02em;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 640px) {
+  .card { padding: 36px; }
+  .title { font-size: 32px; }
+  .outputs { gap: 12px; }
+  .output { flex-basis: 100%; }
 }
