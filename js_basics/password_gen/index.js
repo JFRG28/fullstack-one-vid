@@ -35,7 +35,8 @@ function genPwd(){
     let length=lengthInput.min
     let password=""
     if (isCustomLength){
-        if (lengthInput.valueAsNumber<15 || lengthInput.valueAsNumber>64){
+        if (lengthInput.valueAsNumber<lengthInput.min || 
+            lengthInput.valueAsNumber>lengthInput.max){
             console.log("Not valid input for length")
             return 0
         } else {
@@ -46,8 +47,6 @@ function genPwd(){
     }
     for (let i=0;i<length;i++){
         password+=characters[Math.floor(Math.random()*characters.length)]
-        console.log("password: "+password)
-        console.log("longitud: "+length)
     }
     return password
 }
