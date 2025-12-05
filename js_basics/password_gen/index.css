@@ -158,6 +158,7 @@ body {
   text-align: center;
   box-shadow: 0 4px 0 rgba(0,0,0,0.12) inset;
   letter-spacing: 0.02em;
+  word-break: break-all;
 }
 
 /* Ajustes responsivos */
