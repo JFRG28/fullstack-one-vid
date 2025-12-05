@@ -35,7 +35,12 @@ function genPwd(){
     let length=lengthInput.min
     let password=""
     if (isCustomLength){
-        length=lengthInput.valueAsNumber
+        if (lengthInput.valueAsNumber<15 || lengthInput.valueAsNumber>64){
+            console.log("Not valid input for length")
+            return 0
+        } else {
+            length=lengthInput.valueAsNumber
+        }        
     } else {
         length=lengthInput.min
     }
