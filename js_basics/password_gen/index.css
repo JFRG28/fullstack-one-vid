@@ -110,7 +110,7 @@ body {
   cursor: text;
   box-shadow: 0 2px 0 rgba(0,0,0,0.12) inset;
   transition: transform .08s ease, box-shadow .08s ease, opacity .08s ease;
-  width: 96px;
+  width: 60px;
   text-align: center;
 }
 
