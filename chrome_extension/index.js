@@ -1,7 +1,8 @@
 let msgBtnClick="";
 const inputBtn=document.querySelector("#input-btn");
 let myLeads=[];
-const inputEl=document.querySelector("#input-el")
+const inputEl=document.querySelector("#input-el");
+const ulEl=document.querySelector("#ul-el");
 
 /*function saveInput(){
     msgBtnClick="Button clicked! from onclick attribute"
@@ -17,9 +18,12 @@ inputBtn.addEventListener("click", function(){
     */
     myLeads.push(inputEl.value);
     //console.log(myLeads);
-    for (let i=0;i<myLeads.length;i++){
-        console.log(myLeads[i]);
-    }
 })
+
+for (let i=0;i<myLeads.length;i++){
+    console.log(myLeads[i]);
+}
+
+
 
 
