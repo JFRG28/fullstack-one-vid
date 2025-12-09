@@ -17,11 +17,13 @@ inputBtn.addEventListener("click", function(){
     console.log(myLeads);
     */
     myLeads.push(inputEl.value);
-    //console.log(myLeads);
+    console.log(myLeads);
 })
 
 for (let i=0;i<myLeads.length;i++){
-    console.log(myLeads[i]);
+    //console.log(myLeads[i]);
+    //ulEl.textContent+=myLeads[i]+" ";
+    ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
 }
 
 
