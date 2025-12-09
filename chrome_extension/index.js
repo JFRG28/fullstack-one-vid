@@ -5,9 +5,17 @@ const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 
 inputBtn.addEventListener("click", function(){
-    myLeads.push(inputEl.value);    
-    renderLeads()
+    myLeads.push(inputEl.value);
+    ulEl.innerHTML+="<li>"+inputEl.value+"</li>"
+    //renderLeads()
+    //renderLead()
 })
+
+function renderLead(){
+    let listItem="<li>"+inputEl.value+"</li>"
+    ulEl.innerHTML+=listItem
+    inputEl.value=""
+}
 
 function renderLeads(){
     let listItems=""
