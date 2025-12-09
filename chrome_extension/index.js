@@ -10,9 +10,10 @@ inputBtn.addEventListener("click", function(){
 })
 
 function renderLeads(){
-    ulEl.innerHTML=""
+    let listItems=""
     for (let i=0;i<myLeads.length;i++){
-        ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
+        listItems+="<li>"+myLeads[i]+"</li>"        
+        // ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
         /* alternative way to render de elements
             1. create element
             2. set text content
@@ -23,7 +24,9 @@ function renderLeads(){
             ulEl.append(li)
         */
     }
+    ulEl.innerHTML=listItems
 }
+
 
 
 
