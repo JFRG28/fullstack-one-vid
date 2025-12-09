@@ -13,6 +13,15 @@ function renderLeads(){
     ulEl.innerHTML=""
     for (let i=0;i<myLeads.length;i++){
         ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
+        /* alternative way to render de elements
+            1. create element
+            2. set text content
+            3. append to ul
+        
+            const li=document.createElement("li")
+            li.textContent=myLeads[i]
+            ulEl.append(li)
+        */
     }
 }
 
