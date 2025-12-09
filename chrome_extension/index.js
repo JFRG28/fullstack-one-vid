@@ -4,18 +4,7 @@ let myLeads=[];
 const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 
-/*function saveInput(){
-    msgBtnClick="Button clicked! from onclick attribute"
-    console.log(msgBtnClick)
-}
-*/
-
 inputBtn.addEventListener("click", function(){
-    /*msgBtnClick="Button clicked! from addEventListener";
-    console.log(msgBtnClick);
-    myLeads.push("www.awesomelead.com")
-    console.log(myLeads);
-    */
     myLeads.push(inputEl.value);
     renderLeads()    
 })
@@ -23,8 +12,6 @@ inputBtn.addEventListener("click", function(){
 function renderLeads(){
     ulEl.innerHTML=""
     for (let i=0;i<myLeads.length;i++){
-        //console.log(myLeads[i]);
-        //ulEl.textContent+=myLeads[i]+" ";
         ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
     }
 }
