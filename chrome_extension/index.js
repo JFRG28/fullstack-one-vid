@@ -1,9 +1,10 @@
-const inputBtn=document.querySelector("#input-btn");
 let myLeads=[];
+const inputBtn=document.querySelector("#input-btn");
 //let myLeads=`["www.awesomelead.com"]`; for testing JSON functions only
 const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 const deleteAllBtn=document.querySelector("#delete-all-btn");
+const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
 
 /*
 localStorage.setItem("myLead","www.youtube.com");
@@ -22,11 +23,36 @@ myLeads=JSON.stringify(myLeads)
 console.log(typeof myLeads)
 */
 
-const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
+function renderArray(paramArray){
+    let listItems="";
+    inputEl.value="";
+    for (let i=0;i<paramArray.length;i++){
+        listItems+=`
+            <li>
+                <a href='${paramArray[i]}' target='_blank'>
+                    ${paramArray[i]}
+                </a>
+            </li>
+        `
+        //listItems+="<li>"+myLeads[i]+"</li>"        
+        // ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
+        /* alternative way to render de elements
+            1. create element
+            2. set text content
+            3. append to ul
+        
+            const li=document.createElement("li")
+            li.textContent=myLeads[i]
+            ulEl.append(li)
+        */
+    }
+    ulEl.innerHTML=listItems;
+}
+
 if (leadsFromLocalStorage){
     myLeads=leadsFromLocalStorage;
     console.log("Items in localStorage: "+leadsFromLocalStorage);
-    renderLeads();
+    renderArray(myLeads);
 } else {
     console.log("No items in localStorage: ");
 }
@@ -45,14 +71,14 @@ inputBtn.addEventListener("click", function(){
     `;    
     inputEl.value=""
     */
-    renderLeads();
+    renderArray(myLeads);
     //renderLead()    
 })
 
 deleteAllBtn.addEventListener("dblclick",function(){
     localStorage.clear();
     myLeads=[];
-    renderLeads();
+    renderArray(myLeads);
 })
 
 /*
@@ -63,31 +89,7 @@ function renderLead(){
 }
 */
 
-function renderLeads(){
-    let listItems="";
-    inputEl.value="";
-    for (let i=0;i<myLeads.length;i++){
-        listItems+=`
-            <li>
-                <a href='${myLeads[i]}' target='_blank'>
-                    ${myLeads[i]}
-                </a>
-            </li>
-        `
-        //listItems+="<li>"+myLeads[i]+"</li>"        
-        // ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
-        /* alternative way to render de elements
-            1. create element
-            2. set text content
-            3. append to ul
-        
-            const li=document.createElement("li")
-            li.textContent=myLeads[i]
-            ulEl.append(li)
-        */
-    }
-    ulEl.innerHTML=listItems;
-}
+
 
 
 
