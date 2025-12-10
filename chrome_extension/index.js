@@ -1,5 +1,6 @@
 const inputBtn=document.querySelector("#input-btn");
-let myLeads=`["www.awesomelead.com"]`;
+let myLeads=[];
+//let myLeads=`["www.awesomelead.com"]`; for testing JSON functions only
 const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 
@@ -22,29 +23,40 @@ console.log(typeof myLeads)
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
+    /*
     ulEl.innerHTML+=`
         <li>
             <a href='inputEl.value' target='_blank'>
             ${inputEl.value}
             </a>
         </li>
-    `;
+    `;    
     inputEl.value=""
-    //renderLeads()
+    */
+    renderLeads()
     //renderLead()
 })
 
+/*
 function renderLead(){
     let listItem="<li>"+inputEl.value+"</li>"
     ulEl.innerHTML+=listItem
     inputEl.value=""
 }
+*/
 
 function renderLeads(){
     let listItems=""
     inputEl.value=""
     for (let i=0;i<myLeads.length;i++){
-        listItems+="<li>"+myLeads[i]+"</li>"        
+        listItems+=`
+            <li>
+                <a href='${myLeads[i]}' target='_blank'>
+                    ${myLeads[i]}
+                </a>
+            </li>
+        `
+        //listItems+="<li>"+myLeads[i]+"</li>"        
         // ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
         /* alternative way to render de elements
             1. create element
