@@ -24,7 +24,7 @@ console.log(typeof myLeads)
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
     localStorage.setItem("myLeads",JSON.stringify(myLeads));
-    console.log(localStorage.getItem("myLeads"))
+    console.log("getItem "+localStorage.getItem("myLeads"));
     /*
     ulEl.innerHTML+=`
         <li>
@@ -35,8 +35,10 @@ inputBtn.addEventListener("click", function(){
     `;    
     inputEl.value=""
     */
-    renderLeads()
+    renderLeads();
     //renderLead()
+    let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
+    console.log("From "+leadsFromLocalStorage);
 })
 
 /*
@@ -48,8 +50,8 @@ function renderLead(){
 */
 
 function renderLeads(){
-    let listItems=""
-    inputEl.value=""
+    let listItems="";
+    inputEl.value="";
     for (let i=0;i<myLeads.length;i++){
         listItems+=`
             <li>
@@ -70,7 +72,7 @@ function renderLeads(){
             ulEl.append(li)
         */
     }
-    ulEl.innerHTML=listItems
+    ulEl.innerHTML=listItems;
 }
 
 
