@@ -23,6 +23,8 @@ console.log(typeof myLeads)
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
+    localStorage.setItem("myLeads",JSON.stringify(myLeads));
+    console.log(localStorage.getItem("myLeads"))
     /*
     ulEl.innerHTML+=`
         <li>
