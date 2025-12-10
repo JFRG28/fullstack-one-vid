@@ -1,7 +1,8 @@
 body {
     margin: 0;
     padding: 10px;
-    font-family: Arial, Helvetica, sans-serif;    
+    font-family: Arial, Helvetica, sans-serif;
+    color: #5f9341;
 }
 
 /*
@@ -27,4 +28,16 @@ button {
     margin-top: 5px;
     padding: 10px 15px;
     border: none;    
+}
+
+ul{
+
+}
+
+li{
+
+}
+
+a{
+
 }

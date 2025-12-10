@@ -12,6 +12,7 @@ inputBtn.addEventListener("click", function(){
             </a>
         </li>
     `;
+    inputEl.value=""
     //renderLeads()
     //renderLead()
 })
