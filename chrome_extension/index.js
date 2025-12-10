@@ -1,11 +1,22 @@
 const inputBtn=document.querySelector("#input-btn");
-let myLeads=[];
+let myLeads=`["www.awesomelead.com"]`;
 const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 
 localStorage.setItem("myLead","www.youtube.com");
 console.log(localStorage.getItem("myLead"));
 localStorage.clear()
+
+// 1. Turn the myLeads string into an array
+let myLeadsArray=JSON.parse(myLeads)
+console.log(typeof myLeadsArray)
+// 2. Push a new value to the array
+myLeadsArray.push("www.google.com")
+console.log(myLeadsArray)
+// 3. Turn the array into a string again
+myLeads=JSON.stringify(myLeadsArray)
+// 4. Console.log the string using typeof to verify that it's a string
+console.log(typeof myLeads)
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
