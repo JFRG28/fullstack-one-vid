@@ -6,15 +6,6 @@ body {
     min-width: 400px;
 }
 
-/*
-
-Style our app according to the provided design!
-
-green color -> #5f9341
-
-*/
-
-
 input {
     width: 100%;
     padding: 10px;
@@ -28,7 +19,12 @@ button {
     font-weight: bold;
     margin-top: 5px;
     padding: 10px 15px;
-    border: none;    
+    border: 1px solid #5f9341;
+}
+
+#delete-all-btn{
+    background-color: white;
+    color: #5f9341;
 }
 
 ul{
