@@ -7,10 +7,11 @@ const deleteAllBtn=document.querySelector("#delete-all-btn");
 const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
 const tabBtn=document.querySelector("#tab-btn");
 
-//testing tab only
+/*testing tab only
 const tabs = [
     {url: "https://www.linkedin.com/in/per-harald-borgen/"}
 ]
+*/
 
 /*
 localStorage.setItem("myLead","www.youtube.com");
@@ -93,13 +94,15 @@ deleteAllBtn.addEventListener("dblclick",function(){
 })
 
 tabBtn.addEventListener("click",function(){
-    if (tabs[0].url){
-        myLeads.push(tabs[0].url);
-        localStorage.setItem("myLeads",JSON.stringify(myLeads));
-        renderArray(myLeads);
-    } else{
-        alert("No empty strings allowed");
-    }
+    chrome.tabs.query({active:true,currentWindow:true},function(tabs){
+        if (tabs[0].url){
+            myLeads.push(tabs[0].url);
+            localStorage.setItem("myLeads",JSON.stringify(myLeads));
+            renderArray(myLeads);
+        } else{
+            alert("No empty strings allowed");
+        }
+    })    
 })
 
 /*
