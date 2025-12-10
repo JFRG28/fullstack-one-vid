@@ -83,9 +83,7 @@ inputBtn.addEventListener("click", function(){
         //renderLead()    
     } else{
         alert("No empty strings allowed");
-    }
-    
-    
+    }    
 })
 
 deleteAllBtn.addEventListener("dblclick",function(){
@@ -95,7 +93,13 @@ deleteAllBtn.addEventListener("dblclick",function(){
 })
 
 tabBtn.addEventListener("click",function(){
-    console.log(tabs[0].url);
+    if (tabs[0].url){
+        myLeads.push(tabs[0].url);
+        localStorage.setItem("myLeads",JSON.stringify(myLeads));
+        renderArray(myLeads);
+    } else{
+        alert("No empty strings allowed");
+    }
 })
 
 /*
