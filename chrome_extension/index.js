@@ -8,13 +8,13 @@ console.log(localStorage.getItem("myLead"));
 localStorage.clear()
 
 // 1. Turn the myLeads string into an array
-let myLeadsArray=JSON.parse(myLeads)
-console.log(typeof myLeadsArray)
+myLeads=JSON.parse(myLeads)
+console.log(typeof myLeads)
 // 2. Push a new value to the array
-myLeadsArray.push("www.google.com")
-console.log(myLeadsArray)
+myLeads.push("www.google.com")
+console.log(myLeads)
 // 3. Turn the array into a string again
-myLeads=JSON.stringify(myLeadsArray)
+myLeads=JSON.stringify(myLeads)
 // 4. Console.log the string using typeof to verify that it's a string
 console.log(typeof myLeads)
 
