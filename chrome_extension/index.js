@@ -3,6 +3,7 @@ let myLeads=[];
 //let myLeads=`["www.awesomelead.com"]`; for testing JSON functions only
 const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
+const deleteAllBtn=document.querySelector("#delete-all-btn");
 
 /*
 localStorage.setItem("myLead","www.youtube.com");
@@ -21,7 +22,7 @@ myLeads=JSON.stringify(myLeads)
 console.log(typeof myLeads)
 */
 
-let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
+const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
 if (leadsFromLocalStorage){
     myLeads=leadsFromLocalStorage;
     console.log("Items in localStorage: "+leadsFromLocalStorage);
@@ -46,6 +47,12 @@ inputBtn.addEventListener("click", function(){
     */
     renderLeads();
     //renderLead()    
+})
+
+deleteAllBtn.addEventListener("dblclick",function(){
+    localStorage.clear();
+    myLeads=[];
+    renderLeads();
 })
 
 /*
