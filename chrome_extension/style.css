@@ -3,6 +3,7 @@ body {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     color: #5f9341;
+    min-width: 400px;
 }
 
 /*
