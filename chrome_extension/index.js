@@ -58,21 +58,27 @@ if (leadsFromLocalStorage){
 }
 
 inputBtn.addEventListener("click", function(){
-    myLeads.push(inputEl.value);
-    localStorage.setItem("myLeads",JSON.stringify(myLeads));
-    console.log("getItem "+localStorage.getItem("myLeads"));
-    /*
-    ulEl.innerHTML+=`
-        <li>
-            <a href='inputEl.value' target='_blank'>
-            ${inputEl.value}
-            </a>
-        </li>
-    `;    
-    inputEl.value=""
-    */
-    renderArray(myLeads);
-    //renderLead()    
+    if (inputEl.value){
+        myLeads.push(inputEl.value);
+        localStorage.setItem("myLeads",JSON.stringify(myLeads));
+        console.log("getItem "+localStorage.getItem("myLeads"));
+        /*
+        ulEl.innerHTML+=`
+            <li>
+                <a href='inputEl.value' target='_blank'>
+                ${inputEl.value}
+                </a>
+            </li>
+        `;    
+        inputEl.value=""
+        */
+        renderArray(myLeads);
+        //renderLead()    
+    } else{
+        alert("No se aceptan cadenas vacías");
+    }
+    
+    
 })
 
 deleteAllBtn.addEventListener("dblclick",function(){
