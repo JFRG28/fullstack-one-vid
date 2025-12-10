@@ -22,7 +22,13 @@ console.log(typeof myLeads)
 */
 
 let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
-console.log("From "+leadsFromLocalStorage);
+if (leadsFromLocalStorage){
+    myLeads=leadsFromLocalStorage;
+    console.log("Items in localStorage: "+leadsFromLocalStorage);
+    renderLeads();
+} else {
+    console.log("No items in localStorage: ");
+}
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
