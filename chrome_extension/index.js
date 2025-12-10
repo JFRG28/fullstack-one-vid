@@ -1,13 +1,12 @@
 let myLeads=[];
 const inputBtn=document.querySelector("#input-btn");
-//let myLeads=`["www.awesomelead.com"]`; for testing JSON functions only
 const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 const deleteAllBtn=document.querySelector("#delete-all-btn");
 const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
 const tabBtn=document.querySelector("#tab-btn");
 
-/*testing tab only
+/*testing tab only used when no API
 const tabs = [
     {url: "https://www.linkedin.com/in/per-harald-borgen/"}
 ]
@@ -33,10 +32,9 @@ console.log(typeof myLeads)
 //Initial validation for localStorage
 if (leadsFromLocalStorage){
     myLeads=leadsFromLocalStorage;
-    console.log("Items in localStorage: "+leadsFromLocalStorage);
     renderArray(myLeads);
 } else {
-    console.log("No items in localStorage: ");
+    console.log("No items in localStorage");
 }
 
 function renderArray(paramArray){
@@ -50,8 +48,6 @@ function renderArray(paramArray){
                 </a>
             </li>
         `
-        //listItems+="<li>"+myLeads[i]+"</li>"        
-        // ulEl.innerHTML+="<li>"+myLeads[i]+"</li>";
         /* alternative way to render de elements
             1. create element
             2. set text content
@@ -69,19 +65,7 @@ inputBtn.addEventListener("click", function(){
     if (inputEl.value){
         myLeads.push(inputEl.value);
         localStorage.setItem("myLeads",JSON.stringify(myLeads));
-        console.log("getItem "+localStorage.getItem("myLeads"));
-        /*
-        ulEl.innerHTML+=`
-            <li>
-                <a href='inputEl.value' target='_blank'>
-                ${inputEl.value}
-                </a>
-            </li>
-        `;    
-        inputEl.value=""
-        */
         renderArray(myLeads);
-        //renderLead()    
     } else{
         alert("No empty strings allowed");
     }    
@@ -104,19 +88,3 @@ tabBtn.addEventListener("click",function(){
         }
     })    
 })
-
-/*
-function renderLead(){
-    let listItem="<li>"+inputEl.value+"</li>"
-    ulEl.innerHTML+=listItem
-    inputEl.value=""
-}
-*/
-
-
-
-
-
-
-
-
