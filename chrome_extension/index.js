@@ -3,6 +3,10 @@ let myLeads=[];
 const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 
+localStorage.setItem("myLead","www.youtube.com");
+console.log(localStorage.getItem("myLead"));
+localStorage.clear()
+
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
     ulEl.innerHTML+=`
