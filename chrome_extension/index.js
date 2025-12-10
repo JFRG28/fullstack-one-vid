@@ -3,6 +3,7 @@ let myLeads=`["www.awesomelead.com"]`;
 const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 
+/*
 localStorage.setItem("myLead","www.youtube.com");
 console.log(localStorage.getItem("myLead"));
 localStorage.clear()
@@ -17,6 +18,7 @@ console.log(myLeads)
 myLeads=JSON.stringify(myLeads)
 // 4. Console.log the string using typeof to verify that it's a string
 console.log(typeof myLeads)
+*/
 
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
