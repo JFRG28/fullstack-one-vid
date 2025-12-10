@@ -5,6 +5,12 @@ const inputEl=document.querySelector("#input-el");
 const ulEl=document.querySelector("#ul-el");
 const deleteAllBtn=document.querySelector("#delete-all-btn");
 const leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
+const tabBtn=document.querySelector("#tab-btn");
+
+//testing tab only
+const tabs = [
+    {url: "https://www.linkedin.com/in/per-harald-borgen/"}
+]
 
 /*
 localStorage.setItem("myLead","www.youtube.com");
@@ -22,6 +28,15 @@ myLeads=JSON.stringify(myLeads)
 // 4. Console.log the string using typeof to verify that it's a string
 console.log(typeof myLeads)
 */
+
+//Initial validation for localStorage
+if (leadsFromLocalStorage){
+    myLeads=leadsFromLocalStorage;
+    console.log("Items in localStorage: "+leadsFromLocalStorage);
+    renderArray(myLeads);
+} else {
+    console.log("No items in localStorage: ");
+}
 
 function renderArray(paramArray){
     let listItems="";
@@ -49,14 +64,6 @@ function renderArray(paramArray){
     ulEl.innerHTML=listItems;
 }
 
-if (leadsFromLocalStorage){
-    myLeads=leadsFromLocalStorage;
-    console.log("Items in localStorage: "+leadsFromLocalStorage);
-    renderArray(myLeads);
-} else {
-    console.log("No items in localStorage: ");
-}
-
 inputBtn.addEventListener("click", function(){
     if (inputEl.value){
         myLeads.push(inputEl.value);
@@ -75,7 +82,7 @@ inputBtn.addEventListener("click", function(){
         renderArray(myLeads);
         //renderLead()    
     } else{
-        alert("No se aceptan cadenas vacías");
+        alert("No empty strings allowed");
     }
     
     
@@ -85,6 +92,10 @@ deleteAllBtn.addEventListener("dblclick",function(){
     localStorage.clear();
     myLeads=[];
     renderArray(myLeads);
+})
+
+tabBtn.addEventListener("click",function(){
+    console.log(tabs[0].url);
 })
 
 /*
