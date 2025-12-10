@@ -21,6 +21,9 @@ myLeads=JSON.stringify(myLeads)
 console.log(typeof myLeads)
 */
 
+let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
+console.log("From "+leadsFromLocalStorage);
+
 inputBtn.addEventListener("click", function(){
     myLeads.push(inputEl.value);
     localStorage.setItem("myLeads",JSON.stringify(myLeads));
@@ -36,9 +39,7 @@ inputBtn.addEventListener("click", function(){
     inputEl.value=""
     */
     renderLeads();
-    //renderLead()
-    let leadsFromLocalStorage=JSON.parse(localStorage.getItem("myLeads"));
-    console.log("From "+leadsFromLocalStorage);
+    //renderLead()    
 })
 
 /*
