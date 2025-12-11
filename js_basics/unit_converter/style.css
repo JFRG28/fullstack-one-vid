@@ -1,0 +1,100 @@
+/* Reseteo básico y fuente global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background-color: #111; /* Color de fondo fuera de la app */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Contenedor principal de la aplicación */
+.app-container {
+    width: 100%;
+    max-width: 550px; /* Ancho máximo para simular vista móvil/app */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Estilos de la Sección Superior (Hero) --- */
+.hero-section {
+    background-color: #6943FF; /* Color púrpura vibrante */
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.hero-section h1 {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 35px;
+}
+
+/* Caja del número "20" */
+.input-display-container {
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 4px;
+    width: 140px;
+    height: 110px;
+    margin: 0 auto 30px auto; /* Centrado horizontalmente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-number {
+    font-size: 68px;
+    font-weight: 800;
+    line-height: 1;
+}
+
+/* Botón "Convert" */
+.convert-btn {
+    background-color: white;
+    color: #1F2937;
+    border: none;
+    padding: 12px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- Estilos de la Sección Inferior (Resultados) --- */
+.results-section {
+    background-color: #1F2937; /* Color de fondo oscuro */
+    padding: 35px 25px;
+}
+
+/* Tarjetas individuales de resultados */
+.result-card {
+    background-color: #273549; /* Un tono ligeramente más claro que el fondo */
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+    border-radius: 6px;
+    margin-bottom: 20px; /* Espacio entre tarjetas */
+}
+
+/* Eliminar margen inferior de la última tarjeta */
+.result-card:last-child {
+    margin-bottom: 0;
+}
+
+.result-card h2 {
+    color: #B794F4; /* Color púrpura claro para los títulos */
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.result-card p {
+    color: #D1D5DB; /* Color gris claro para el texto */
+    font-size: 16px;
+    line-height: 1.4;
+}
