@@ -54,7 +54,7 @@ body {
 }
 
 /* Botón "Convert" */
-.convert-btn {
+#convert-btn {
     background-color: white;
     color: #1F2937;
     border: none;
