@@ -6,10 +6,15 @@ const oneLiterToUSAGallon=0.264172
 const oneUSAGallonToLiters=3.78541
 const oneKgToPounds=2.20462
 const onePoundToKgs=0.453592
+const lengthEl=document.querySelector("#length-el")
+
 
 convertBtn.addEventListener("click",function(){
-    console.log("mt to feet= "+converter(Number(inputEl.value),oneMeterToFeet))
-    console.log("feet to mt= "+converter(Number(inputEl.value),oneFeetToMeters))
+    lengthEl.textContent=`
+        ${Number(inputEl.value)} meter(s) = ${converter(Number(inputEl.value),oneMeterToFeet)} feet 
+        | 
+        ${Number(inputEl.value)} feet = ${converter(Number(inputEl.value),oneFeetToMeters)} meter(s)
+    `
     console.log("lt to USAgall= "+converter(Number(inputEl.value),oneLiterToUSAGallon))
     console.log("USAgall to lt = "+converter(Number(inputEl.value),oneUSAGallonToLiters))
     console.log("kg to pounds= "+converter(Number(inputEl.value),oneKgToPounds))
