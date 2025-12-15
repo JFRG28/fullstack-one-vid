@@ -7,6 +7,8 @@ const oneUSAGallonToLiters=3.78541
 const oneKgToPounds=2.20462
 const onePoundToKgs=0.453592
 const lengthEl=document.querySelector("#length-el")
+const volumeEl=document.querySelector("#volume-el")
+const massEl=document.querySelector("#mass-el")
 
 
 convertBtn.addEventListener("click",function(){
@@ -15,10 +17,16 @@ convertBtn.addEventListener("click",function(){
         | 
         ${Number(inputEl.value)} feet = ${converter(Number(inputEl.value),oneFeetToMeters)} meter(s)
     `
-    console.log("lt to USAgall= "+converter(Number(inputEl.value),oneLiterToUSAGallon))
-    console.log("USAgall to lt = "+converter(Number(inputEl.value),oneUSAGallonToLiters))
-    console.log("kg to pounds= "+converter(Number(inputEl.value),oneKgToPounds))
-    console.log("pound to kgs = "+converter(Number(inputEl.value),onePoundToKgs))
+    volumeEl.textContent=`
+        ${Number(inputEl.value)} liter(s) = ${converter(Number(inputEl.value),oneLiterToUSAGallon)} gallon(s)
+        | 
+        ${Number(inputEl.value)} gallon(s) = ${converter(Number(inputEl.value),oneUSAGallonToLiters)} liter(s)
+    `
+    massEl.textContent=`
+        ${Number(inputEl.value)} kilo(s) = ${converter(Number(inputEl.value),oneKgToPounds)} pound(s) 
+        | 
+        ${Number(inputEl.value)} pound(s) = ${converter(Number(inputEl.value),onePoundToKgs)} kilo(s)
+    `
 })
 
 function converter(qt,destUnit){
