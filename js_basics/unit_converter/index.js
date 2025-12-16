@@ -10,8 +10,14 @@ const lengthEl=document.querySelector("#length-el")
 const volumeEl=document.querySelector("#volume-el")
 const massEl=document.querySelector("#mass-el")
 
+inputEl.addEventListener("input",function(){
+    this.value=this.value.replace(/[^0-9.]/g,"")
+    if ((this.value.match(/\./g) || []).length>1){
+        this.value=this.value.slice(0,-1)
+    }
+})
 
-convertBtn.addEventListener("click",function(){
+convertBtn.addEventListener("click",function(){    
     lengthEl.textContent=`
         ${Number(inputEl.value)} meter(s) = ${converter(Number(inputEl.value),oneMeterToFeet)} feet 
         | 
