@@ -81,6 +81,7 @@ a {
     border-radius: 40px;
     width: 100px;
 }
+
 /* Info Section */
 .info-section {
     margin: 250px auto;
@@ -161,6 +162,44 @@ a {
     border-radius: 40px;
 }
 
+/* Sign Up Form */
+.form-heading {
+    font-size: 48px;
+    margin: 0;
+}
+.form-intro {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+.form-section {
+    margin: 120px auto;
+    width: 450px;
+    text-align: center;
+}
+.input {
+    display: block;
+    width: 300px;
+    margin: 5px auto 10px;
+    border-radius: 20px;
+    padding: 8px 20px;
+    border: 2px solid #333333;
+	font-family: 'Poppins', sans-serif;
+}
+.input::-webkit-input-placeholder {
+    color: #aaaaaa;
+}
+.submit-button {
+    border: 2px solid #333333;
+    padding: 8px 20px;
+    border-radius: 40px;
+    margin: 10px auto 0;
+    width: 130px;
+	font-family: 'Poppins', sans-serif;
+}
+.submit-button:hover {
+    background-color: #dddddd;
+    cursor: pointer;
+}
 
 /* Footer */
 .footer {
