@@ -79,6 +79,18 @@ body, .contact-input, .address-input, .radio-container p {
 .radio-container p {
     margin-bottom: 10px;
 }
+fieldset{
+    border: 2px solid #ccc; /* Cambia el color y grosor del borde */
+    border-radius: 8px;     /* Bordes redondeados */
+    padding: 20px;          /* Espacio interior */
+    margin-bottom: 20px;    /* Espacio exterior */
+    background-color: transparent;
+}
+legend {
+    font-weight: bold;
+    padding: 0 10px;        /* Espacio a los lados del texto */
+    color: #333;
+}
 
 /* 
 Challenge:
