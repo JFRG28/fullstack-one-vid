@@ -63,11 +63,15 @@
                         placeholder="homer@gmail.com" 
                         id="email-el"/>
                     <div class="radio-container">
-                        <p>Do you have cats?</p>
-                        <label for="yes">Yes</label>
-                        <input class="contact-radio" id="yes" type="radio" name="cats" />
-                        <label for="no">No</label>
-                        <input class="contact-radio" id="no" type="radio" name="cats" />
+                        <fieldset>
+                            <legend>Cats</legend>
+                            <p>Do you have cats?</p>
+                            <label for="yes">Yes</label>
+                            <input class="contact-radio" id="yes" type="radio" name="cats" />
+                            <label for="no">No</label>
+                            <input class="contact-radio" id="no" type="radio" name="cats" />
+                        </fieldset>
+                        
                     </div>
                     <button class="contact-submit-button" type="button">Send message 🎉</button>
                 </form>
