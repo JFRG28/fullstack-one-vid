@@ -82,6 +82,36 @@ a {
     width: 100px;
 }
 
+/* About Section */
+.about-section {
+    background-image: url(images/clouds.jpg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+    border: 2px solid #333333;
+}
+.about-heading {
+    margin: 0;
+    font-size: 48px;
+}
+.about span {
+    color: #007000;
+}
+.about-link {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.about a {
+    border: 2px solid #333333;
+    padding: 8px 20px;
+    border-radius: 40px;
+}
+
+
 /* Footer */
 .footer {
     background-color: #333333;
