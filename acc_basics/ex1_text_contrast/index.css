@@ -61,6 +61,7 @@ a {
     color: #007000;
     font-weight: 700;
     line-height: 1;
+    display: block;
 }
 .hero-text {
     font-size: 20px;
@@ -92,7 +93,7 @@ a {
     margin: 0 auto;
     padding: 20px 40px;
     width: 800px;
-    color: #007000;
+    color: #1FFF1F;
 }
 .social-links p {
     display: inline;
