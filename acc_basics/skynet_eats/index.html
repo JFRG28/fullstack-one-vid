@@ -11,7 +11,7 @@
     </head>
     <body>
         <!-- Navigation bar -->
-        <div class="navbar">
+        <nav class="navbar">
             <div class="logo">
                 <span class="iconify icon" data-icon="healthicons:drone-outline"></span>
                 <p class="logo-text">Skynet Eats</p>
@@ -22,12 +22,12 @@
                 <a class="nav-link" href="#">Contact</a>
                 <a class="nav-link" href="#">Sign up</a>
             </div>
-        </div>
+        </nav>
         
         <!-- Main content -->
-        <div>
+        <main>
             <!-- Hero section -->
-            <div class="hero-section">
+            <section class="hero-section">
                 <img class="hero-image" src="images/hero-image.jpg" 
                 alt="A landscape with a green mountain in the background, some trees, there's a sunset, a lake
                 and a dron flying over carrying a plastic basket with groceries"/>
@@ -36,74 +36,74 @@
                     <p class="hero-text">Grocery delivery straight to your... window!</p>
                     <a class="hero-link" href="#">Order Now</a>
                 </div>
-            </div>
-        </div>
+            </section>
     
-        <!-- Info section -->
-        <div class="info-section">
-            <div class="info">
-                <h1 class="info-heading">Food Delivery Service</h1>
-                <p>Is it a bird? Is it a plane? None of the above. It’s a drone on its way to you with your tasty groceries! If you don’t want fast food, but you want your food fast,  
-                    <a href="#">check out our partnered shops here.</a>
-                </p>
-            </div>
-            <div class="statistics">
-                <img class="info-image" src="images/pal9000.jpg" alt="A flying drone inclined in a 45 degree angle"/>
-                <div class="stat">
-                    <h4 class="stat-heading">Drones🤖</h4>
-                    <p class="stat-number">+4000</p>
+            <!-- Info section -->
+            <section class="info-section">
+                <div class="info">
+                    <h1 class="info-heading">Food Delivery Service</h1>
+                    <p>Is it a bird? Is it a plane? None of the above. It’s a drone on its way to you with your tasty groceries! If you don’t want fast food, but you want your food fast,  
+                        <a href="#">check out our partnered shops here.</a>
+                    </p>
                 </div>
-                <div class="stat">
-                    <h4 class="stat-heading">Customers🧑🏽</h4>
-                    <p class="stat-number">+120 000</p>
+                <div class="statistics">
+                    <img class="info-image" src="images/pal9000.jpg" alt="A flying drone inclined in a 45 degree angle"/>
+                    <div class="stat">
+                        <h4 class="stat-heading">Drones🤖</h4>
+                        <p class="stat-number">+4000</p>
+                    </div>
+                    <div class="stat">
+                        <h4 class="stat-heading">Customers🧑🏽</h4>
+                        <p class="stat-number">+120 000</p>
+                    </div>
+                    <div class="stat">
+                        <h4 class="stat-heading">Cat conflicts🐱</h4>
+                        <p class="stat-number">~70</p>
+                    </div>
                 </div>
-                <div class="stat">
-                    <h4 class="stat-heading">Cat conflicts🐱</h4>
-                    <p class="stat-number">~70</p>
-                </div>
-            </div>
-        </div>
+            </section>
         
-        <!-- About section -->
-        <div class="about-section">
-            <div class="about">
-                <h2 class="about-heading">About <span>Us</span></h2>
-                <p class="about-text">Skynet was founded by Ariana Grande, a true pioneer in the field of AI and robotics.🦾 Our purpose is to serve humans and we realized that we’re driving humans around, we’re walking their bio-pets, why not feed them too?</p>
-                <p>If you want to know more, head over to our about page!</p>
-                <div class="about-link">
-                    <a href="#">About Skynet</a>
+            <!-- About section -->
+            <section class="about-section">
+                <div class="about">
+                    <h2 class="about-heading">About <span>Us</span></h2>
+                    <p class="about-text">Skynet was founded by Ariana Grande, a true pioneer in the field of AI and robotics.🦾 Our purpose is to serve humans and we realized that we’re driving humans around, we’re walking their bio-pets, why not feed them too?</p>
+                    <p>If you want to know more, head over to our about page!</p>
+                    <div class="about-link">
+                        <a href="#">About Skynet</a>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </section>
         
             <!-- Form section -->
-        <div class="form-section">
-            <form>
-                <h2 class="form-heading">What's Next?</h2>
-                <p class="form-intro">Want pizza through your window?🍕 Recieve a notification when the service is available.</p>
-                <label for="fs-fullname-el">
-                        Full name:
-                </label>
-                <input 
-                    class="input" 
-                    type="text" 
-                    placeholder="Homer J. Simpson" 
-                    id="fs-fullname-el"/>
-                <label for="fs-email-el">
-                        E-mail:
-                </label>
-                <input 
-                    class="input" 
-                    type="email" 
-                    placeholder="homer@gmail.com" 
-                    id="fs-email-el"/>
-                <div class="submit-button" type="button" onclick="submitForm()">I'm in ✓</div>
-            </form>
-        </div>
-        
+            <section class="form-section">
+                <form>
+                    <h2 class="form-heading">What's Next?</h2>
+                    <p class="form-intro">Want pizza through your window?🍕 Recieve a notification when the service is available.</p>
+                    <label for="fs-fullname-el">
+                            Full name:
+                    </label>
+                    <input 
+                        class="input" 
+                        type="text" 
+                        placeholder="Homer J. Simpson" 
+                        id="fs-fullname-el"/>
+                    <label for="fs-email-el">
+                            E-mail:
+                    </label>
+                    <input 
+                        class="input" 
+                        type="email" 
+                        placeholder="homer@gmail.com" 
+                        id="fs-email-el"/>
+                    <button class="submit-button" type="button" onclick="submitForm()">I'm in ✓</button>
+                </form>
+            </section>
+        </main>
+
         <!-- Footer -->
-        <div class="footer">
-            <div class="social-links">
+        <footer class="footer">
+            <nav class="social-links">
                 <a class="social-link" href="#">
                     <ion-icon class="icon" name="logo-facebook"></ion-icon>
                     <p>Facebook</p>
@@ -120,8 +120,8 @@
                     <ion-icon class="icon" name="logo-twitter"></ion-icon>
                     <p>Twitter</p>
                 </a>
-            </div>
-        </div>
+            </nav>
+        </footer>
         <script src="index.js"></script>
         <!-- The two scripts below import the icons we use in our footer -->
         <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
