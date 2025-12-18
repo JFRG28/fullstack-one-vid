@@ -5,7 +5,8 @@ function sendMessage() {
     // Replace the button with a paragraph
     button.outerHTML = '<p id="submitMessage" class="submit-message">Message sent! ✅</p>';
     // Get the home link element and add focus to it
-    
+    const linkEl=document.querySelector("#home-link-el").focus()
+    //console.log(linkEl)
 }
 
 // Here's your challenge:
