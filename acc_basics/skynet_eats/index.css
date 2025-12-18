@@ -226,6 +226,9 @@ a {
     display: flex;
     align-items: center;
 }
+ul{
+    list-style-type: none;
+}
 
 /* 
 Challenge:
