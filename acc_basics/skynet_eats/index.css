@@ -229,6 +229,17 @@ a {
 ul{
     list-style-type: none;
 }
+/* Code for Skip Navigation Link goes here */
+.skip-nav-link {
+    position: absolute;
+    left: -200px;
+    top: 80px;
+    transition: 3s;
+}
+.skip-nav-link:focus {
+    left: 0;
+    transition: 1s;
+}
 
 /* 
 Challenge:
