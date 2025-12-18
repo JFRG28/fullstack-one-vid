@@ -91,6 +91,11 @@ legend {
     padding: 0 10px;        /* Espacio a los lados del texto */
     color: #333;
 }
+.submit-message {
+    padding: 0;
+    margin-bottom: 14px;
+    border: none;
+}
 
 /* 
 Challenge:
