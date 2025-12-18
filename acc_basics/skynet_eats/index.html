@@ -77,15 +77,29 @@
         </div>
         
             <!-- Form section -->
-            <div class="form-section">
-                <form>
-                    <h2 class="form-heading">What's Next?</h2>
-                    <p class="form-intro">Want pizza through your window?🍕 Recieve a notification when the service is available.</p>
-                    <input class="input" type="text" placeholder="Full name" />
-                    <input class="input" type="email" placeholder="Email" />
-                    <div class="submit-button" type="button" onclick="submitForm()">✓</div>
-                </form>
-            </div>
+        <div class="form-section">
+            <form>
+                <h2 class="form-heading">What's Next?</h2>
+                <p class="form-intro">Want pizza through your window?🍕 Recieve a notification when the service is available.</p>
+                <label for="fs-fullname-el">
+                        Full name:
+                </label>
+                <input 
+                    class="input" 
+                    type="text" 
+                    placeholder="Homer J. Simpson" 
+                    id="fs-fullname-el"/>
+                <label for="fs-email-el">
+                        E-mail:
+                </label>
+                <input 
+                    class="input" 
+                    type="email" 
+                    placeholder="homer@gmail.com" 
+                    id="fs-email-el"/>
+                <div class="submit-button" type="button" onclick="submitForm()">I'm in ✓</div>
+            </form>
+        </div>
         
         <!-- Footer -->
         <div class="footer">
