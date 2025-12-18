@@ -10,19 +10,44 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body class="contact-page">
-        <div id="main">
+        <main id="main">
             <!-- Form section -->
-            <div class="contact-form-section">
+            <section class="contact-form-section">
                 <form>
-                    <h2 class="contact-form-heading">Reach <span>Out</span></h2>
+                    <h1 class="contact-form-heading">Reach <span>Out</span></h1>
                     <div class="contact-form-intro">Curious about something? Complete these fields and "get in touch", as you humans say. 🤙</div>
-                    <input class="contact-input" type="text" placeholder="Full name" />
-                    <input class="contact-input" type="text" placeholder="Email" />
-                    <textarea class="contact-textarea" rows="4" cols="50" placeholder="Your message..."></textarea>
-                    <button class="contact-submit-button" type="button" onclick="submitForm()">Done 🎉</button>
+                    <label for="full-name-el">
+                        Full name
+                    </label>
+                    <input 
+                        id="full-name-el" 
+                        class="contact-input" 
+                        type="text" 
+                        placeholder="Homer J. Simpson" />
+                    <label for="email-el">
+                        Email
+                    </label>
+                    <input 
+                        id="email-el" 
+                        class="contact-input" 
+                        type="text" 
+                        placeholder="homer@gmail.com" />
+                    <label for="text-el">
+                        Your message...
+                    </label>
+                    <textarea 
+                        id="text-el"    
+                        class="contact-textarea" 
+                        rows="4" 
+                        cols="50" 
+                        placeholder="Type here"></textarea>
+                    <button class="contact-submit-button" type="button" onclick="submitForm()">Send message 🎉</button>
                 </form>
-                <img class="contact-image" src="images/connect.jpg" />
-            </div>
-        </div>
+                <img 
+                    class="contact-image" 
+                    src="images/connect.jpg" 
+                    alt="A human hand raising trying to touch a robotic white hand which is coming from above"/>
+            </section>
+        </main>
     </body>
 </html>
