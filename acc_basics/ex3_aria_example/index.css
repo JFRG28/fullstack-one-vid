@@ -9,7 +9,7 @@ body {
     background-color: #cecbf3;
 }
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #333333;
     padding: 0;
     height: fit-content;
