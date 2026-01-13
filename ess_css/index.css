@@ -39,3 +39,7 @@ a{
     color: #ef5839;
     text-decoration: dotted underline;
 }
+
+a:hover, a:active{
+    color: #d4b44c;
+}
