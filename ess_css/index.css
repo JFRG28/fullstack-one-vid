@@ -34,3 +34,8 @@ section{
 .img-nft{
     width: 100%;
 }
+
+a{
+    color: #ef5839;
+    text-decoration: dotted underline;
+}
