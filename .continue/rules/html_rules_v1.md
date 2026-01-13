@@ -3,7 +3,6 @@ name: My HTML tags rules
 globs: "**/*.html"
 alwaysApply: true
 description: rules based on the best practices obtained form Scrimba FS course
-applyTo: "**/*.html"
 ---
 # HTML standards for tags
 1. Use `<header>` for:
