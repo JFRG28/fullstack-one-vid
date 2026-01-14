@@ -6,15 +6,12 @@ body{
     margin: 0;
 }
 
-header{
-    background-color: #5f29a3;    
-    padding: 45px 0px
+header, .section-two-item{
+    background-color: #5f29a3;
 }
 
 h1{
-    font-size: 36px;
-    color: whitesmoke;
-    margin-bottom: 0px;
+    font-size: 36px;    
 }
 
 h2{
@@ -24,17 +21,19 @@ h2{
 h3{
     color: #d0aaff;
     font-size: 20px;
-    margin-top: 0px;
 }
 
-section{
+h1, h3{
+    margin: 0;
+}
+
+section, header, footer{
     padding: 45px 0px;
 }
 
 footer{
     color: #5f29a3;
     text-align: center;
-    padding: 45px 0px;
     font-size: 16px;
 }
 
@@ -56,8 +55,7 @@ a:hover, a:active{
     margin: 0 auto;
 }
 
-.section-two-item{
-    background-color: #5f29a3;
+h1, .section-two-item{
     color: whitesmoke;
 }
 
