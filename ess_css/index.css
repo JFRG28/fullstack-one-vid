@@ -53,3 +53,13 @@ a:hover, a:active{
     background-color: #5f29a3;
     color: whitesmoke;
 }
+
+.img-item{
+    width: 300px;
+    border-radius: 4.6px;
+}
+
+.container-img-item{
+    display: flex;
+    justify-content: space-between;
+}
