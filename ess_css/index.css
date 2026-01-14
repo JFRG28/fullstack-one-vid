@@ -31,6 +31,13 @@ section{
     padding: 45px 0px;
 }
 
+footer{
+    color: #5f29a3;
+    text-align: center;
+    padding: 45px 0px;
+    font-size: 16px;
+}
+
 .img-nft{
     width: 100%;
 }
